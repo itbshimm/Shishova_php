@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img {
+            width: 500px;
+            height: 300px;
+        }
+
+        .menu li {
+            display: inline;
+        }
+
+        .menu li {
+            position: relative;
+            padding: 5px 10px;
+            margin: 10px;
+            outline: 1px solid black;
+            border-radius: 15px;
+        }
+
+        .menu li.menu_item_active::after {
+            content: "\02C5";
+            position: absolute;
+            left: 45%;
+            top: -20px;
+            z-index: 1;
+        }
+    </style>
+    <script>
+        function obshee1_1() {
+            document.getElementById("img").style.width = "600px";
+            document.getElementById("img").style.height = "360px";
+        }
+        function obshee1_2() {
+            document.getElementById("img").style.width = "500px";
+            document.getElementById("img").style.height = "300px";
+        }
+        window.onload = function () {
+            var menu_item = document.getElementsByTagName('li');
+            for (var i = 0; i < menu_item.length; i++) {
+                var menu_item_active = menu_item[i];
+                menu_item_active.onmouseover = function () {
+                    this.classList.add("menu_item_active");
+                };
+                menu_item_active.onmouseout = function () {
+                    this.classList.remove("menu_item_active");
+                };
+            }
+        }
+        function obshee3_1() {
+            document.getElementById("obshee3_1").style.color = "blue";
+        }
+        function obshee3_2() {
+            document.getElementById("obshee3_2").style.backgroundColor = "blue";
+        }
+        function obshee3_3() {
+            document.getElementById("obshee3_3").style.backgroundColor = "red";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Общие задания</h3>
+    <b>№1</b>
+    <img src="image.jpg" alt="" id="img" onmouseover="obshee1_1()" onmouseout="obshee1_2()">
+    <hr>
+    <b>№2</b>
+    <ul class="menu">
+        <li>Пункт 1</li>
+        <li>Пункт 1</li>
+        <li>Пункт 1</li>
+        <li>Пункт 1</li>
+        <li>Пункт 1</li>
+    </ul>
+    <hr>
+    <b>№3</b>
+    <div>
+        <p id="obshee3_1" onmouseover="obshee3_1()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eligendi rem ipsam
+            sapiente hic rerum ea exercitationem dicta veniam molestiae, consectetur illum esse atque repellendus
+            numquam provident qui asperiores laborum!</p>
+        <p id="obshee3_2" onmouseover="obshee3_2()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, eveniet fuga. Molestiae ducimus facere nihil
+            assumenda dolor et mollitia cum eum eveniet ea, necessitatibus possimus amet voluptatem? Suscipit, placeat
+            at.</p>
+        <p id="obshee3_3" onmouseover="obshee3_3()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempora pariatur, rerum debitis nobis
+            incidunt, omnis sapiente, earum culpa quibusdam repellendus? Provident voluptate consequuntur iusto
+            aspernatur voluptas accusantium corporis consectetur.</p>
+    </div>
+</body>
+
+</html>

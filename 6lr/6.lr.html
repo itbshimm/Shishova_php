@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function rachet(obj) {
+            var m1 = parseInt(obj.m1.value);
+            var m2 = parseInt(obj.m2.value);
+            var m3 = parseInt(obj.m3.value);
+            var sumdohod = m1 + m2 + m3;
+            var sumnalog = sumdohod * 0.13;
+            var itog = sumdohod - sumnalog;
+            document.write("Общая сумма дохода за квартал равна ", sumdohod, ".<br>");
+            document.write("Сумма подоходного налога (13%) равна ", sumnalog, ".<br>");
+            document.write("Сумма, подлежащая выдаче на руки. равна ", itog, ".");
+        }
+        function in1(obj) {
+            var r = parseInt(obj.r.value);
+            var l = 2 * Math.PI * r;
+            var s = Math.PI * Math.pow(r, 2);
+            document.write("Длина окружности равна ", l, ".<br>");
+            document.write("Площадь круга равна ", s, ".<br>");
+        }
+        function in2(obj) {
+            var x = parseInt(obj.x.value);
+            var y = parseInt(obj.y.value);
+            var x2 = x;
+            var y2 = -y;
+            document.write("Координаты точки, симметричной относительно оси абсцисс: ", x2, ", " , y2, ".<br>");
+        }
+    </script>
+</head>
+
+<body>
+    <h3>1-ый квартал</h3>
+    <form action="" name="obshee">
+        Доход за 1-ый месяц: <input name="m1"><br><br>
+        Доход за 2-ый месяц: <input name="m2"><br><br>
+        Доход за 3-ый месяц: <input name="m3"><br><br>
+        <input type="button" onclick="rachet(obshee)" value="Рассчитать">
+    </form>
+    <hr>
+    <h3>Индивидуальное задание №1</h3>
+    <form action="" name="individ1">
+        Радиус окружности(круга): <input name="r"><br><br>
+        <input type="button" onclick="in1(individ1)" value="Рассчитать">
+    </form>
+    <hr>
+    <h3>Индивидуальное задание №2</h3>
+    <form action="" name="individ2">
+        X: <input name="x"><br><br>
+        Y: <input name="y"><br><br>
+        <input type="button" onclick="in2(individ2)" value="Рассчитать">
+    </form>
+
+</body>
+
+</html>
