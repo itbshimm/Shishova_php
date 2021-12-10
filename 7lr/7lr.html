@@ -31,6 +31,11 @@
             top: -20px;
             z-index: 1;
         }
+        .individ_zadanie td{
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+        }
     </style>
     <script>
         function obshee1_1() {
@@ -41,6 +46,16 @@
             document.getElementById("img").style.width = "500px";
             document.getElementById("img").style.height = "300px";
         }
+        function obshee3_1() {
+            document.getElementById("obshee3_1").style.color = '#' + (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+        }
+        function obshee3_2() {
+            document.getElementById("obshee3_2").style.backgroundColor = '#' + (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+        }
+        function obshee3_3() {
+            document.getElementById("obshee3_3").style.backgroundColor = '#' + (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+        }
+
         window.onload = function () {
             var menu_item = document.getElementsByTagName('li');
             for (var i = 0; i < menu_item.length; i++) {
@@ -52,15 +67,28 @@
                     this.classList.remove("menu_item_active");
                 };
             }
-        }
-        function obshee3_1() {
-            document.getElementById("obshee3_1").style.color = "blue";
-        }
-        function obshee3_2() {
-            document.getElementById("obshee3_2").style.backgroundColor = "blue";
-        }
-        function obshee3_3() {
-            document.getElementById("obshee3_3").style.backgroundColor = "red";
+
+
+            var obshee4_podpis = document.getElementById('obshee4_podpis');
+            var obshee4_img = document.getElementById('obshee4_img');
+            var i = 0;
+            var j = 1;
+            var images = new Array('image.jpg', 'image2.png');
+            obshee4_img.onclick = function () {
+                if (i !== 1) {
+                    this.src = images[++i];
+                } else {
+                    this.src = images[--i];
+                }
+            }
+            obshee4_podpis.onclick = function () {
+                this.style.color = '#' + (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+            }
+            document.querySelectorAll("td").forEach(e => {
+                e.onclick =  function () {
+                    e.innerHTML = "<img src = \"image.jpg\" style = \" height:100%; width:100%;vertical-align: middle;\" >";
+                }
+            });
         }
     </script>
 </head>
@@ -81,16 +109,31 @@
     <hr>
     <b>№3</b>
     <div>
-        <p id="obshee3_1" onmouseover="obshee3_1()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eligendi rem ipsam
+        <p id="obshee3_1" onmouseover="obshee3_1()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            eligendi rem ipsam
             sapiente hic rerum ea exercitationem dicta veniam molestiae, consectetur illum esse atque repellendus
             numquam provident qui asperiores laborum!</p>
-        <p id="obshee3_2" onmouseover="obshee3_2()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, eveniet fuga. Molestiae ducimus facere nihil
+        <p id="obshee3_2" onmouseover="obshee3_2()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis,
+            eveniet fuga. Molestiae ducimus facere nihil
             assumenda dolor et mollitia cum eum eveniet ea, necessitatibus possimus amet voluptatem? Suscipit, placeat
             at.</p>
-        <p id="obshee3_3" onmouseover="obshee3_3()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempora pariatur, rerum debitis nobis
+        <p id="obshee3_3" onmouseover="obshee3_3()">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium tempora pariatur, rerum debitis nobis
             incidunt, omnis sapiente, earum culpa quibusdam repellendus? Provident voluptate consequuntur iusto
             aspernatur voluptas accusantium corporis consectetur.</p>
     </div>
+    <hr>
+    <b>№4</b>
+    <div align="center">
+        <img id="obshee4_img" src="image.jpg" alt="" align="center" width="400">
+        <p id="obshee4_podpis">Подпись под фотографией</p>
+    </div>
+    <hr>
+    <div align="center">
+        <h3>Индивидуальное задание</h3>
+        <table align="center" class="individ_zadanie">
+            <tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+        </table>
+    </div>
 </body>
-
 </html>

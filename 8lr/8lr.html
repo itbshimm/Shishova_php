@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById('btn');
+            var rez = document.getElementById('rez');
+            btn.onclick = function () {
+                text = document.getElementById('text').value.match(/\p{L}+/ug).length;
+                rez.innerHTML = "Количество слов в тексте: " + text;
+            }
+            var btn2 = document.getElementById('btn2');
+            var rez2 = document.getElementById('rez2');
+            btn2.onclick = function () {
+                text2 = document.getElementById('text2').value.replace(/\s+/g, " ");
+                rez2.innerHTML = "\"Сжатый\" текст: " + text2;
+            }
+            var individbtn = document.getElementById('individbtn');
+            var individrez = document.getElementById('individrez');
+            individbtn.onclick = function () {
+                long = document.getElementById('individtext').value.split(' ').reduce((l, s) => l.length >= s.length ? l : s);
+                short = document.getElementById('individtext').value.split(' ').reduce((l, s) => l.length <= s.length ? l : s);
+                individrez.innerHTML = "Самое длинное слово: " + long + "<br>Самое короткое слово:" + short;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Общие заданияы</h3>
+    <b>Общее задание №1</b>
+    <div>
+        <input type="text" id="text">
+        <button id="btn">Расчитать</button>
+        <div id="rez"></div>
+    </div>
+    <hr>
+    <b>Общее задание №2</b>
+    <div>
+        <input type="text" id="text2">
+        <button id="btn2">Расчитать</button>
+        <div id="rez2"></div>
+    </div>
+    <hr>
+    <h3>Индивидуальное задание</h3>
+    <div>
+        <input type="text" id="individtext">
+        <button id="individbtn">Расчитать</button>
+        <div id="individrez">
+        </div>
+    </div>
+</body>
+
+</html>
