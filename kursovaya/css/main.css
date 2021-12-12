@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-width: 100%;
+}
+.header {
+  background-color: #5c788f;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header .logotype {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.menu-list .menu-item {
+  list-style: none;
+  display: inline;
+  padding: 0 10px;
+}
+
+.menu-list .menu-item a {
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 7px 15px;
+  border-radius: 25px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.menu-list .menu-item a:hover {
+  border: 1px solid #fff;
+  transition: 0.3s;
+}
+
+.menu-list .menu-item .active {
+  border: 1px solid #fff;
+}
+.header .contacts {
+  margin-left: auto;
+  padding: 0 10px;
+}
