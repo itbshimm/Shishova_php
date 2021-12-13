@@ -11,6 +11,9 @@
   <?php
   require_once $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php';
   ?>
+  <?php
+  require_once $_SERVER['DOCUMENT_ROOT'] . '/pages/main.php';
+  ?>
 
 </body>
 
