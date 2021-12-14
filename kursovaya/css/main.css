@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Exo 2', sans-serif;
+  line-height: 1.8;
 }
 body {
   max-width: 100%;
@@ -54,17 +56,125 @@ body {
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 80px 0;
     margin-left: auto;
     margin-right: auto;
-
+    padding: 20px 10%;
+    justify-content: space-between;
+    min-height: 1000px;
+    text-align: justify;
+}
+.banner1 h1{
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.banner1 .block1 h1{
+    color: #5b778f;
 }
 .banner1>div{
-    width: 50%;
+    padding: 20px;
+    width: 45%;
+    font-size: 18px;
+    margin-top: 100px;
 }
-.banner .block1{
+@media (max-width: 1024px){
+    .banner1{
+        flex-wrap: wrap;
+    }
+    .banner1>div{
+        width: auto;
+    }
+}
+.banner1 .block1{
     align-self: flex-start;
+    color: #000;
 }
-.banner .block2{
+.banner1 .block2{
     align-self: flex-end;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+.main2{
+    padding: 0 10%;
+}
+.main2 h1{
+    color: #5b778f;
+    margin-top: 35px;
+}
+.types_of_boiler_rooms{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    text-align: justify;
+}
+@media (max-width: 1024px){
+    .types_of_boiler_rooms{
+        flex-wrap: wrap;
+    }
+}
+.types_of_boiler_rooms div{
+    padding: 30px;
+    width: auto;
+    min-width: 45%;
+}
+.types_of_boiler_rooms2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.types_of_boiler_rooms2 .title{
+    font-size: 24px;
+    color: #f69643;
+    display: block;
+}
+.types_of_boiler_rooms2 ul{
+    text-align: justify;
+}
+.types_of_boiler_rooms2 ul li{
+    list-style-type: none;
+    line-height: 1.5;
+    position: relative;
+}
+.types_of_boiler_rooms2 ul li:before{
+    content: "\2024";
+    color: #f69643;
+    font-size: 35px;
+    font-weight: 900;
+    position:absolute;
+    bottom: -5px;
+    left: -15px;
+}
+
+.request_consult{
+    background-image: url('/img/request_consult.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 50px;
+    min-width: 1024px;
+    margin: auto;
+}
+.request_consult h1{
+    color: #fff;
+}
+.request_consult form input{
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 240px;
+    box-sizing: border-box;
+}
+.request_consult form button{
+    border-radius: 7px;
+    padding: 8px 20px;
+    font-size: 18px;
+    width: 240px;
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-align: center;
 }
